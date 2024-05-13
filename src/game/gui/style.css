@@ -1,0 +1,7 @@
+#underlineLabel {
+    -fx-underline: false;
+}
+
+#underlineLabel:hover {
+    -fx-underline: true;
+}
