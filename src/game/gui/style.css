@@ -1,7 +1,20 @@
-#underlineLabel {
-    -fx-underline: false;
+.custom-button {
+    -fx-background-color: #333333; /* Dark black-gray background color */
+    -fx-text-fill: #FFFFFF; /* White text color */
+    -fx-font-size: 24px; /* Font size */
+    -fx-font-family: 'Franklin Gothic Heavy';
+    -fx-pref-height: 40px; /* Preferred height */
 }
 
-#underlineLabel:hover {
-    -fx-underline: true;
+.instructions-label{
+	-fx-background-color: #333333;
+	-fx-text-fill: white;
+}
+
+.custom-button:hover {
+    -fx-background-color: #555555; /* Dark gray background color on hover */
+}
+
+.custom-button:pressed {
+    -fx-background-color: #222222; /* Even darker background color when pressed */
 }
