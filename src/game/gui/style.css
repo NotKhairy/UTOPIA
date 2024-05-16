@@ -6,9 +6,21 @@
     -fx-pref-height: 40px; /* Preferred height */
 }
 
+.paragraph-Vbox{
+	-fx-background-color: #333333;
+}
+
+
+.instructionsTitle-label{
+	-fx-background-color: #333333;
+	-fx-text-fill: white;
+	-fx-font-size: 30px;
+}
+
 .instructions-label{
 	-fx-background-color: #333333;
 	-fx-text-fill: white;
+	-fx-font-size: 14px;
 }
 
 .custom-button:hover {

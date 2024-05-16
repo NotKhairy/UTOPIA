@@ -35,7 +35,16 @@ public class WeaponRegistry
 		this.minRange = minRange;
 		this.maxRange = maxRange;
 	}
-
+	
+	public String getType()
+	{
+		if(1 == code) return "Piercing Cannon";
+		if(2 == code) return "Sniper Cannon";
+		if(3 == code) return "VolleySpread Cannon";
+		else return "Wall Trap";
+	}
+	
+	
 	public int getCode()
 	{
 		return code;
