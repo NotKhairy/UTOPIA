@@ -7,13 +7,25 @@ import game.engine.lanes.Lane;
 import game.engine.weapons.factory.FactoryResponse;
 import game.engine.weapons.factory.WeaponFactory;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 
 public class PlayerController {
 	
-	public void handleBuyButton(Battle battle, int weaponCode, Lane lane) throws InsufficientResourcesException, InvalidLaneException {
+	private Scene scene;
+	
+	public void handleBuyButton(Battle battle, int weaponCode, Lane lane, Node root) throws InsufficientResourcesException, InvalidLaneException {
 		battle.purchaseWeapon(weaponCode, lane);
+		refreshData(root);
 	}
-	public void handlePassTurnButton(Battle battle) {
+	public void handlePassTurnButton(Battle battle, Node root) {
 		battle.passTurn();
+		refreshData(root);
+		
+	}
+	private void refreshData(Node root) {
+		// TODO Auto-generated method stub
+		
 	}
 }
