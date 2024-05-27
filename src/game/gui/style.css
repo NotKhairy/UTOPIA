@@ -1,0 +1,32 @@
+.custom-button {
+    -fx-background-color: #333333;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 24px;
+    -fx-font-family: 'Franklin Gothic Heavy';
+    -fx-pref-height: 40px;
+}
+
+.paragraph-Vbox{
+	-fx-background-color: #333333;
+}
+
+
+.instructionsTitle-label{
+	-fx-background-color: #333333;
+	-fx-text-fill: white;
+	-fx-font-size: 30px;
+}
+
+.instructions-label{
+	-fx-background-color: #333333;
+	-fx-text-fill: white;
+	-fx-font-size: 14px;
+}
+
+.custom-button:hover {
+    -fx-background-color: #555555; /* Dark gray background color on hover */
+}
+
+.custom-button:pressed {
+    -fx-background-color: #222222; /* Even darker background color when pressed */
+}
