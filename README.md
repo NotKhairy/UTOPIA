@@ -136,6 +136,6 @@ Some weapons, like the **Volley Spread Cannon**, have additional stats:
 
 The game follows a continuous loop where the player must strategically defend against increasingly difficult waves of titans.
 
-![Flow Chart](https://github.com/NotKhairy/UTOPIA/blob/Master/image.jpg?raw=true)
+![Flow Chart](https://github.com/user-attachments/assets/8db32f3e-bd87-4366-820f-dfe445df0a90)
 
 ---
