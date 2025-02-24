@@ -76,8 +76,6 @@ public class BattleScene {
 		}
 		final Battle battle = new Battle(1, 0, 900, initalNumberOfLanes, initalResourcesPerLane);
 		PlayerController playerController = new PlayerController();
-		Model model = new Model();
-		Model2 model2 = new Model2();
 		ArrayList<Lane> battleLanes = new ArrayList<Lane>();
 		ArrayList<VBox> titansAlive = new ArrayList<VBox>();
 		battle.refillApproachingTitans();
@@ -315,50 +313,50 @@ public class BattleScene {
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 
-		simulateGame.setOnAction(e-> {
-			Battle simBattle = battle.clone();
-			try {
-				simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
-				simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
-				simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
-				simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
-				simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
-			} catch (InsufficientResourcesException | InvalidLaneException e2) {
-				// TODO Auto-generated catch block
-				e2.printStackTrace();
-			}
-			System.out.println(simBattle.getScore());
-			for(int i=0; i<10 ;i++) {
-				try {
-					simBattle = model2.simulateEasy(simBattle, 1);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-			System.out.println(simBattle.getScore());
+		// simulateGame.setOnAction(e-> {
+		// 	Battle simBattle = battle.clone();
+		// 	try {
+		// 		simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
+		// 		simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
+		// 		simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
+		// 		simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
+		// 		simBattle.purchaseWeapon(2, (Lane) simBattle.getLanes().toArray()[simBattle.getLanes().toArray().length-1]);
+		// 	} catch (InsufficientResourcesException | InvalidLaneException e2) {
+		// 		// TODO Auto-generated catch block
+		// 		e2.printStackTrace();
+		// 	}
+		// 	System.out.println(simBattle.getScore());
+		// 	for(int i=0; i<10 ;i++) {
+		// 		try {
+		// 			simBattle = model2.simulateEasy(simBattle, 1);
+		// 		} catch (IOException e1) {
+		// 			// TODO Auto-generated catch block
+		// 			e1.printStackTrace();
+		// 		}
+		// 	}
+		// 	System.out.println(simBattle.getScore());
 
 
-			AnchorPane gameOverContainer = new AnchorPane();
-			Label gameOverText = new Label("GAME OVER!\n"
-					+ "score: "+ simBattle.getScore()+"\n"
-					+ "Turns: " + simBattle.getNumberOfTurns());
-			Button mainMenuButton = new Button("Play Again!");
-			mainMenuButton.setLayoutX(600);
-			mainMenuButton.setLayoutY(345);
-			mainMenuButton.setPrefHeight(100);
-			mainMenuButton.setPrefWidth(200);
-			gameOverContainer.getChildren().addAll(gameOverText,mainMenuButton);
-			AnchorPane.setLeftAnchor(mainMenuButton, 600.0);
-			root.getChildren().clear();
-			root.getChildren().add(gameOverContainer);
+		// 	AnchorPane gameOverContainer = new AnchorPane();
+		// 	Label gameOverText = new Label("GAME OVER!\n"
+		// 			+ "score: "+ simBattle.getScore()+"\n"
+		// 			+ "Turns: " + simBattle.getNumberOfTurns());
+		// 	Button mainMenuButton = new Button("Play Again!");
+		// 	mainMenuButton.setLayoutX(600);
+		// 	mainMenuButton.setLayoutY(345);
+		// 	mainMenuButton.setPrefHeight(100);
+		// 	mainMenuButton.setPrefWidth(200);
+		// 	gameOverContainer.getChildren().addAll(gameOverText,mainMenuButton);
+		// 	AnchorPane.setLeftAnchor(mainMenuButton, 600.0);
+		// 	root.getChildren().clear();
+		// 	root.getChildren().add(gameOverContainer);
 
-			mainMenuButton.setOnAction(e3 -> {
-				Controller.switchToMainScene(e3);
-			});
+		// 	mainMenuButton.setOnAction(e3 -> {
+		// 		Controller.switchToMainScene(e3);
+		// 	});
 
 
-		});
+		// });
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 
 		//		simulateGame.setOnAction(e-> {

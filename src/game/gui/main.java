@@ -31,25 +31,25 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.paint.Color;
 
 public class main extends Application {
-	 
-	 @Override
-	 public void start(Stage primaryStage) {
-		// MediaPlayer mediaPlayer = MediaPlayerSingleton.getInstance("/mainMenuTrack.mp3");
-	     //mediaPlayer.play();
-		 MainScene mainScene = new MainScene();
-		 
-		 String iconPath = "/AttackOnTitan.jpg";	
-		 Image iconImage = new Image(getClass().getResourceAsStream(iconPath)); 
-		
-	     
-	     primaryStage.setTitle("Utopia");
-	     primaryStage.getIcons().add(iconImage);
-	     primaryStage.setResizable(false);
-	     primaryStage.setScene(mainScene.createScene());
-	     primaryStage.show();
-	    }
 
-	    public static void main(String[] args) {
-	        launch(args);
-	    }
+	@Override
+	public void start(Stage primaryStage) {
+		// MediaPlayer mediaPlayer =
+		// MediaPlayerSingleton.getInstance("/mainMenuTrack.mp3");
+		// mediaPlayer.play();
+		MainScene mainScene = new MainScene();
+
+		String iconPath = "/AttackOnTitan.jpg";
+		Image iconImage = new Image(getClass().getResourceAsStream(iconPath));
+
+		primaryStage.setTitle("Utopia");
+		primaryStage.getIcons().add(iconImage);
+		primaryStage.setResizable(false);
+		primaryStage.setScene(mainScene.createScene());
+		primaryStage.show();
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
 }
